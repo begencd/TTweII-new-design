@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="tk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Türkmenistanyň Telekommunikasiýalar we informatika instituty - Fakultetler we hünärler">
+    <title>Fakultetler | ITIT</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .page-header {
+            padding: 150px 0 80px;
+            text-align: center;
+            background: linear-gradient(to bottom, var(--bg-secondary), var(--bg-primary));
+            border-bottom: 1px solid var(--glass-border);
+        }
+        
+        .faculties-page-section {
+            padding: 4rem 0;
+            background-image: url('images/tech-bg.png');
+            background-size: cover;
+            background-attachment: fixed;
+            position: relative;
+        }
+
+        .faculties-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(4, 13, 33, 0.9);
+        }
+
+        .faculties-list {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 3rem;
+            position: relative;
+            z-index: 1;
+        }
+
+        .faculty-full-card {
+            background: var(--glass-bg);
+            border: 1px solid var(--glass-border);
+            border-radius: 15px;
+            padding: 3rem;
+            display: flex;
+            gap: 3rem;
+            align-items: center;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .faculty-full-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+            border-color: rgba(100, 255, 218, 0.3);
+        }
+
+        .faculty-full-icon {
+            font-size: 4rem;
+            color: var(--accent-cyan);
+            min-width: 100px;
+            text-align: center;
+            background: rgba(100, 255, 218, 0.1);
+            width: 120px;
+            height: 120px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            box-shadow: 0 0 20px rgba(100, 255, 218, 0.2);
+        }
+
+        .faculty-full-content h3 {
+            font-size: 1.8rem;
+            margin-bottom: 1rem;
+            color: var(--text-primary);
+        }
+
+        .faculty-full-content p {
+            color: var(--text-secondary);
+            margin-bottom: 1.5rem;
+            line-height: 1.6;
+        }
+
+        .specialties-list {
+            list-style: none;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .specialty-tag {
+            background: rgba(0, 112, 243, 0.2);
+            color: #8892b0;
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            border: 1px solid rgba(0, 112, 243, 0.3);
+            transition: all 0.3s ease;
+        }
+
+        .specialty-tag:hover {
+            background: rgba(100, 255, 218, 0.2);
+            color: var(--accent-cyan);
+            border-color: var(--accent-cyan);
+        }
+
+        @media (max-width: 768px) {
+            .faculty-full-card {
+                flex-direction: column;
+                text-align: center;
+                gap: 1.5rem;
+                padding: 2rem;
+            }
+            .specialties-list {
+                justify-content: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header class="glass">
+        <div class="nav-container">
+            <a href="index.html" class="logo">ITIT.EDU.TM</a>
+            
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="index.html">Baş sahypa</a></li>
+                    <li><a href="about.html">Biz barada</a></li>
+                    <li><a href="news.html">Täzelikler</a></li>
+                    <li><a href="science.html">Ylym</a></li>
+                    <li><a href="faculties.html" class="active">Fakultetler</a></li>
+                    <li><a href="contact.html">Habarlaşmak</a></li>
+                </ul>
+            </nav>
+
+            <button class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </button>
+        </div>
+    </header>
+
+    <!-- Page Header -->
+    <div class="page-header">
+        <div class="container">
+            <h1 class="hero-title" style="font-size: 3.5rem; margin-bottom: 1rem; animation-delay: 0.2s;">Fakultetler</h1>
+            <p class="hero-subtitle" style="animation-delay: 0.4s;">Geljegiň hünärmenlerini taýýarlaýarys</p>
+        </div>
+    </div>
+
+    <!-- Main Content -->
+    <section class="faculties-page-section">
+        <div class="faculties-overlay"></div>
+        <div class="container">
+            <div class="faculties-list">
+                
+                <div class="faculty-full-card reveal">
+                    <div class="faculty-full-icon">
+                        <i class="fa-solid fa-code"></i>
+                    </div>
+                    <div class="faculty-full-content">
+                        <h3>Maglumat tehnologiýalary we programmirleme fakulteti</h3>
+                        <p>Kompýuter ylymlary, programma üpjünçiligi we sanly ulgamlar üçin ýokary hünärli inženerleri taýýarlaýar. Talyplar häzirki zaman maksatnamalaşdyrma dillerini we innowasion tilsimatlary özleşdirýärler.</p>
+                        <ul class="specialties-list">
+                            <li class="specialty-tag">Programma inženerligi</li>
+                            <li class="specialty-tag">Kompýuter ulgamynyň programma üpjünçiligi</li>
+                            <li class="specialty-tag">Hasaplaýyş torlarynyň programma üpjünçiligi</li>
+                            <li class="specialty-tag">Amaly informatika</li>
+                            <li class="specialty-tag">Maglumat ulgamlary we tehnologiýalary</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="faculty-full-card reveal" style="transition-delay: 0.1s;">
+                    <div class="faculty-full-icon">
+                        <i class="fa-solid fa-shield-halved"></i>
+                    </div>
+                    <div class="faculty-full-content">
+                        <h3>Maglumat ulgamlarynyň howpsuzlygy fakulteti</h3>
+                        <p>Kiberhowpsuzlyk, maglumatlary goramak we elektron ulgamlaryň howpsuzlygy boýunça hünärmenleri ýetişdirýär. Döwlet we hususy eýeçilikdäki maglumatlaryň bökdençsiz işlemegini üpjün etmek öwredilýär.</p>
+                        <ul class="specialties-list">
+                            <li class="specialty-tag">Maglumat howpsuzlygy</li>
+                            <li class="specialty-tag">Elektron howpsuzlyk ulgamlary</li>
+                            <li class="specialty-tag">Telekommunikasiýa ulgamlarynyň maglumat howpsuzlygy</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="faculty-full-card reveal" style="transition-delay: 0.2s;">
+                    <div class="faculty-full-icon">
+                        <i class="fa-solid fa-satellite-dish"></i>
+                    </div>
+                    <div class="faculty-full-content">
+                        <h3>Telekommunikasiýalar fakulteti</h3>
+                        <p>Aragatnaşyk torlary, optiki-süýümli ulgamlar, we köpkanally telekommunikasiýa tehnologiýalary boýunça öňdebaryjy bilim berilýär.</p>
+                        <ul class="specialties-list">
+                            <li class="specialty-tag">Aragatnaşyk torlary we kommutasiýa ulgamlary</li>
+                            <li class="specialty-tag">Köpkanally telekommunikasiýa ulgamlary</li>
+                            <li class="specialty-tag">Infokommunikasiýa tehnologiýalary</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="faculty-full-card reveal" style="transition-delay: 0.3s;">
+                    <div class="faculty-full-icon">
+                        <i class="fa-solid fa-chart-line"></i>
+                    </div>
+                    <div class="faculty-full-content">
+                        <h3>Sanly ykdysadyýet we dolandyryş fakulteti</h3>
+                        <p>Häzirki zaman sanly ykdysadyýetiň talaplaryna laýyklykda, kärhanalary dolandyrmak, biznes-informatika we logistika ugurlarynda menejerleri taýýarlaýar.</p>
+                        <ul class="specialties-list">
+                            <li class="specialty-tag">Biznes-informatika</li>
+                            <li class="specialty-tag">Logistika</li>
+                            <li class="specialty-tag">Kärhananyň ykdysadyýeti we dolandyrylyşy</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="faculty-full-card reveal" style="transition-delay: 0.4s;">
+                    <div class="faculty-full-icon">
+                        <i class="fa-solid fa-robot"></i>
+                    </div>
+                    <div class="faculty-full-content">
+                        <h3>Önümçilik proseslerini awtomatlaşdyrmak fakulteti</h3>
+                        <p>Senagat kärhanalarynda awtomatika, robototehnika we dolandyryş ulgamlaryny taslamak we olara hyzmat etmek boýunça hünärler öwredilýär.</p>
+                        <ul class="specialties-list">
+                            <li class="specialty-tag">Önümçiligiň we tehnologiýa prosesleriniň awtomatlaşdyrylyşy</li>
+                            <li class="specialty-tag">Awtomatika we tehniki ulgamlarda dolandyryş</li>
+                            <li class="specialty-tag">Demir ýol ulagynda awtomatika, telemehanika we aragatnaşyk</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="faculty-full-card reveal" style="transition-delay: 0.5s;">
+                    <div class="faculty-full-icon">
+                        <i class="fa-solid fa-broadcast-tower"></i>
+                    </div>
+                    <div class="faculty-full-content">
+                        <h3>Aragatnaşygyň radiotehnologiýalary fakulteti</h3>
+                        <p>Radioaragatnaşyk, hemra aragatnaşygy, tele we radio ýaýlymlar ulgamy boýunça inžener-tehnologlary ýetişdirýän we ylmy-barlag geçirýän bölüm.</p>
+                        <ul class="specialties-list">
+                            <li class="specialty-tag">Hereketli obýektler bilen aragatnaşyk serişdeleri</li>
+                            <li class="specialty-tag">Radioelektron ulgamlary we toplumlary</li>
+                            <li class="specialty-tag">Radioaragatnaşyk, radioýaýlym we telewideniýe</li>
+                            <li class="specialty-tag">Senagat elektronikasy</li>
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-col">
+                    <h3 style="color: var(--accent-cyan); font-family: 'Outfit', sans-serif; font-size: 1.5rem; font-weight: 800;">ITIT</h3>
+                    <p style="color: var(--text-secondary); margin-top: 1rem;">Türkmenistanyň Telekommunikasiýalar we informatika instituty - sanly geljegiň binýady.</p>
+                </div>
+                
+                <div class="footer-col">
+                    <h3>Peýdaly sahypalar</h3>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Baş sahypa</a></li>
+                        <li><a href="about.html">Biz barada</a></li>
+                        <li><a href="news.html">Täzelikler</a></li>
+                        <li><a href="science.html">Ýaş alymlar geňeşi</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-col">
+                    <h3>Habarlaşmak</h3>
+                    <ul class="contact-info footer-links">
+                        <li>
+                            <i class="fa-solid fa-location-dot"></i>
+                            <span>Magtymguly şaýoly 68, Aşgabat, Türkmenistan</span>
+                        </li>
+                        <li>
+                            <i class="fa-solid fa-envelope"></i>
+                            <a href="mailto:ttii.rektorlyk@online.tm">ttii.rektorlyk@online.tm</a>
+                        </li>
+                        <li>
+                            <i class="fa-solid fa-phone"></i>
+                            <a href="tel:+99312942179">+993 12 942179</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; <script>document.write(new Date().getFullYear())</script> Ähli hukuklary goralan. ITIT</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="tk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Türkmenistanyň Telekommunikasiýalar we informatika instituty - Ylym we Ýaş alymlar geňeşi">
+    <title>Ylym | ITIT</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .page-header {
+            padding: 150px 0 80px;
+            text-align: center;
+            background: linear-gradient(to bottom, var(--bg-secondary), var(--bg-primary));
+            border-bottom: 1px solid var(--glass-border);
+        }
+
+        .science-section {
+            padding: 4rem 0;
+        }
+
+        .science-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-bottom: 4rem;
+        }
+
+        .science-card {
+            background: var(--glass-bg);
+            border: 1px solid var(--glass-border);
+            border-radius: 15px;
+            padding: 2.5rem;
+            text-align: center;
+            transition: all 0.3s ease;
+        }
+
+        .science-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+            border-color: var(--accent-cyan);
+            background: rgba(10, 25, 48, 0.8);
+        }
+
+        .science-icon {
+            font-size: 3.5rem;
+            color: var(--accent-cyan);
+            margin-bottom: 1.5rem;
+            display: inline-block;
+            transition: transform 0.3s ease;
+        }
+
+        .science-card:hover .science-icon {
+            transform: scale(1.1);
+        }
+
+        .science-title {
+            font-size: 1.5rem;
+            color: var(--text-primary);
+            margin-bottom: 1rem;
+        }
+
+        .science-desc {
+            color: var(--text-secondary);
+            font-size: 1rem;
+            margin-bottom: 1.5rem;
+            line-height: 1.6;
+        }
+
+        .highlight-box {
+            background: linear-gradient(135deg, rgba(10, 25, 48, 0.9), rgba(0, 112, 243, 0.2));
+            border: 1px solid var(--accent-cyan);
+            border-radius: 15px;
+            padding: 4rem 2rem;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+            margin-top: 2rem;
+        }
+
+        .highlight-box::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url('images/tech-bg.png');
+            background-size: cover;
+            opacity: 0.1;
+            z-index: 0;
+        }
+
+        .highlight-content {
+            position: relative;
+            z-index: 1;
+        }
+
+        .highlight-title {
+            font-size: 2.5rem;
+            color: var(--text-primary);
+            margin-bottom: 1rem;
+            font-family: 'Outfit', sans-serif;
+        }
+
+        .highlight-text {
+            color: var(--text-secondary);
+            font-size: 1.2rem;
+            max-width: 800px;
+            margin: 0 auto 2rem;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header class="glass">
+        <div class="nav-container">
+            <a href="index.html" class="logo">ITIT.EDU.TM</a>
+            
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="index.html">Baş sahypa</a></li>
+                    <li><a href="about.html">Biz barada</a></li>
+                    <li><a href="news.html">Täzelikler</a></li>
+                    <li><a href="science.html" class="active">Ylym</a></li>
+                    <li><a href="faculties.html">Fakultetler</a></li>
+                    <li><a href="contact.html">Habarlaşmak</a></li>
+                </ul>
+            </nav>
+
+            <button class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </button>
+        </div>
+    </header>
+
+    <!-- Page Header -->
+    <div class="page-header">
+        <div class="container">
+            <h1 class="hero-title" style="font-size: 3.5rem; margin-bottom: 1rem; animation-delay: 0.2s;">Ylym</h1>
+            <p class="hero-subtitle" style="animation-delay: 0.4s;">Innowasiýa we ylmy-barlaglar merkezi</p>
+        </div>
+    </div>
+
+    <!-- Main Content -->
+    <section class="science-section">
+        <div class="container">
+            
+            <div class="science-grid">
+                <div class="science-card reveal">
+                    <i class="fa-solid fa-users-gear science-icon"></i>
+                    <h3 class="science-title">Ýaş alymlar geňeşi</h3>
+                    <p class="science-desc">Institutymyzyň içindäki Ýaş alymlar gurnagynyň ylmy işleri, innowasion täzeçillikleri we startuplary barada giňişleýin maglumat.</p>
+                    <a href="#" class="news-link">Giňişleýin <i class="fa-solid fa-arrow-right"></i></a>
+                </div>
+
+                <div class="science-card reveal" style="transition-delay: 0.1s;">
+                    <i class="fa-solid fa-laptop-code science-icon"></i>
+                    <h3 class="science-title">Sanly Çözgüt IT meýdança</h3>
+                    <p class="science-desc">Programma üpjünçiliklerini we sanly taslamalary durmuşa ornaşdyrmak üçin ýöriteleşdirilen IT barlaghana merkezimiz.</p>
+                    <a href="#" class="news-link">Giňişleýin <i class="fa-solid fa-arrow-right"></i></a>
+                </div>
+
+                <div class="science-card reveal" style="transition-delay: 0.2s;">
+                    <i class="fa-solid fa-user-graduate science-icon"></i>
+                    <h3 class="science-title">Aspirantura</h3>
+                    <p class="science-desc">Ýokary hünärli ylmy işgärleri taýýarlamak, dissertasiýa goramak we akademik ylmy-barlaglary geçirmek mümkinçilikleri.</p>
+                    <a href="#" class="news-link">Giňişleýin <i class="fa-solid fa-arrow-right"></i></a>
+                </div>
+
+                <div class="science-card reveal" style="transition-delay: 0.3s;">
+                    <i class="fa-solid fa-comments science-icon"></i>
+                    <h3 class="science-title">Ylmy-amaly maslahatlar</h3>
+                    <p class="science-desc">Milli we halkara derejesinde geçirilýän ylmy konferensiýalar, forumlar we ylmy-amaly maslahatlar barada maglumatlar.</p>
+                    <a href="#" class="news-link">Giňişleýin <i class="fa-solid fa-arrow-right"></i></a>
+                </div>
+            </div>
+
+            <div class="highlight-box reveal">
+                <div class="highlight-content">
+                    <h2 class="highlight-title">Innowasion Taslamalar</h2>
+                    <p class="highlight-text">Talyplarymyz we mugallymlarymyz tarapyndan işlenip düzülen sanly ykdysadyýet, kiberhowpsuzlyk, emeli aň we robototehnika ugurlaryndaky taslamalar ýurdumyzyň dürli pudaklarynda üstünlikli ornaşdyrylýar.</p>
+                    <a href="news.html" class="btn btn-primary">Taslamalary gör</a>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-col">
+                    <h3 style="color: var(--accent-cyan); font-family: 'Outfit', sans-serif; font-size: 1.5rem; font-weight: 800;">ITIT</h3>
+                    <p style="color: var(--text-secondary); margin-top: 1rem;">Türkmenistanyň Telekommunikasiýalar we informatika instituty - sanly geljegiň binýady.</p>
+                </div>
+                
+                <div class="footer-col">
+                    <h3>Peýdaly sahypalar</h3>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Baş sahypa</a></li>
+                        <li><a href="about.html">Biz barada</a></li>
+                        <li><a href="news.html">Täzelikler</a></li>
+                        <li><a href="science.html">Ýaş alymlar geňeşi</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-col">
+                    <h3>Habarlaşmak</h3>
+                    <ul class="contact-info footer-links">
+                        <li>
+                            <i class="fa-solid fa-location-dot"></i>
+                            <span>Magtymguly şaýoly 68, Aşgabat, Türkmenistan</span>
+                        </li>
+                        <li>
+                            <i class="fa-solid fa-envelope"></i>
+                            <a href="mailto:ttii.rektorlyk@online.tm">ttii.rektorlyk@online.tm</a>
+                        </li>
+                        <li>
+                            <i class="fa-solid fa-phone"></i>
+                            <a href="tel:+99312942179">+993 12 942179</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; <script>document.write(new Date().getFullYear())</script> Ähli hukuklary goralan. ITIT</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

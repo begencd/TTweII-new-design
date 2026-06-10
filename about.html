@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="tk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Türkmenistanyň Telekommunikasiýalar we informatika instituty - Biz barada">
+    <title>Biz barada | ITIT</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .page-header {
+            padding: 150px 0 80px;
+            text-align: center;
+            background: linear-gradient(to bottom, var(--bg-secondary), var(--bg-primary));
+            border-bottom: 1px solid var(--glass-border);
+        }
+
+        .content-section {
+            padding: 4rem 0;
+        }
+
+        .text-block {
+            background: var(--glass-bg);
+            padding: 3rem;
+            border-radius: 15px;
+            border: 1px solid var(--glass-border);
+            margin-bottom: 3rem;
+            line-height: 1.8;
+            font-size: 1.1rem;
+            color: var(--text-secondary);
+        }
+
+        .text-block p {
+            margin-bottom: 1.5rem;
+        }
+
+        .text-block p:last-child {
+            margin-bottom: 0;
+        }
+
+        .text-block strong {
+            color: var(--text-primary);
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-top: 4rem;
+        }
+
+        .feature-card {
+            background: rgba(10, 25, 48, 0.5);
+            padding: 2rem;
+            border-radius: 10px;
+            border-left: 4px solid var(--accent-cyan);
+            transition: transform 0.3s ease;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-5px);
+            background: rgba(10, 25, 48, 0.8);
+        }
+
+        .feature-icon {
+            font-size: 2rem;
+            color: var(--accent-cyan);
+            margin-bottom: 1rem;
+        }
+
+        .feature-title {
+            font-size: 1.2rem;
+            margin-bottom: 1rem;
+            color: var(--text-primary);
+        }
+        
+        .timeline {
+            position: relative;
+            max-width: 800px;
+            margin: 4rem auto 0;
+        }
+
+        .timeline::after {
+            content: '';
+            position: absolute;
+            width: 2px;
+            background-color: var(--accent-cyan);
+            top: 0;
+            bottom: 0;
+            left: 50%;
+            margin-left: -1px;
+        }
+
+        .timeline-item {
+            padding: 10px 40px;
+            position: relative;
+            background-color: inherit;
+            width: 50%;
+        }
+
+        .timeline-item::after {
+            content: '';
+            position: absolute;
+            width: 20px;
+            height: 20px;
+            right: -10px;
+            background-color: var(--bg-primary);
+            border: 4px solid var(--accent-cyan);
+            top: 15px;
+            border-radius: 50%;
+            z-index: 1;
+        }
+
+        .left {
+            left: 0;
+        }
+
+        .right {
+            left: 50%;
+        }
+
+        .left::before {
+            content: " ";
+            height: 0;
+            position: absolute;
+            top: 22px;
+            width: 0;
+            z-index: 1;
+            right: 30px;
+            border: medium solid var(--glass-bg);
+            border-width: 10px 0 10px 10px;
+            border-color: transparent transparent transparent var(--glass-bg);
+        }
+
+        .right::before {
+            content: " ";
+            height: 0;
+            position: absolute;
+            top: 22px;
+            width: 0;
+            z-index: 1;
+            left: 30px;
+            border: medium solid var(--glass-bg);
+            border-width: 10px 10px 10px 0;
+            border-color: transparent var(--glass-bg) transparent transparent;
+        }
+
+        .right::after {
+            left: -10px;
+        }
+
+        .timeline-content {
+            padding: 20px 30px;
+            background-color: var(--glass-bg);
+            position: relative;
+            border-radius: 6px;
+            border: 1px solid var(--glass-border);
+        }
+        
+        @media screen and (max-width: 600px) {
+            .timeline::after {
+                left: 31px;
+            }
+            
+            .timeline-item {
+                width: 100%;
+                padding-left: 70px;
+                padding-right: 25px;
+            }
+            
+            .timeline-item::before {
+                left: 60px;
+                border: medium solid white;
+                border-width: 10px 10px 10px 0;
+                border-color: transparent white transparent transparent;
+            }
+
+            .left::after, .right::after {
+                left: 21px;
+            }
+            
+            .right {
+                left: 0%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header class="glass">
+        <div class="nav-container">
+            <a href="index.html" class="logo">ITIT.EDU.TM</a>
+            
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="index.html">Baş sahypa</a></li>
+                    <li><a href="about.html" class="active">Biz barada</a></li>
+                    <li><a href="news.html">Täzelikler</a></li>
+                    <li><a href="science.html">Ylym</a></li>
+                    <li><a href="faculties.html">Fakultetler</a></li>
+                    <li><a href="contact.html">Habarlaşmak</a></li>
+                </ul>
+            </nav>
+
+            <button class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </button>
+        </div>
+    </header>
+
+    <!-- Page Header -->
+    <div class="page-header">
+        <div class="container">
+            <h1 class="hero-title" style="font-size: 3.5rem; margin-bottom: 1rem; animation-delay: 0.2s;">Biz barada</h1>
+            <p class="hero-subtitle" style="animation-delay: 0.4s;">Bilim ulgamymyz indiki nesle ylham berýär</p>
+        </div>
+    </div>
+
+    <!-- Main Content -->
+    <section class="content-section">
+        <div class="container">
+            <div class="text-block reveal">
+                <p><strong>2019-njy ýylyň 12-nji iýunynda</strong> Hormatly Prezidentimiz "Türkmenistanyň Telekommunikasiýalar we informatika institutyny döretmek hakyndaky" Permana gol çekdi. Täze IT ýokary okuw mekdebi ýurdumyzyň ykdysadyýetiniň dürli pudaklaryny sanlylaşdyrmak üçin programmalary işläp taýýarlaýan we sanly enjamlar bilen üpjünçilik merkezi hökmünde gysga döwürde guwandyryjy netijeleri gazandy.</p>
+                
+                <p>Häzirki döwürde sanly tehnologiýalar durmuşymyza giňden ornaşýar. Olary ulanmaýan pudagy göz öňüne getirmek asla mümkin däl. Programma üpjünçiligi ýaly "arassa sanly önümlerden" başga-da, sanly tehnologiýalar ykdysadyýetiň ähli ulgamlaryny ösdürmekde özboluşly binýat bolup hyzmat edýär. Şonuň üçin hem, milli ykdysadyýetimiziň geljekki ösüşi döwletiň garaşsyz tehnologiýa, programma üpjünçilik ulgamyna gönüden-göni baglydyr.</p>
+                
+                <p>Ýurdumyzda sanly tehnologiýalaryň öňdebaryjy tehnosferasyny döretmek işi, esasan, Türkmenistanyň Telekommunikasiýalar we informatika institutynda ýerine ýetirilýär. Mälim bolşy ýaly, dünýäde ýokary girdejili, iri kompaniýalar maglumat tehnologiýalary we telekommunikasiýalar bilen baglydyr. Olaryň gözbaşy bolsa, köplenç, bilim ojaklaryndaky talyplaryň ylmy-barlag tejribehanalaryndan gaýdýar.</p>
+                
+                <p>Sanly ykdysadyýete geçmekde zerur bolan hünärmenleri taýýarlamak maksady bilen, Türkmenistanyň Telekommunikasiýalar we informatika institutynda jemi <strong>21 hünär</strong> boýunça hünärmenleri taýýarlaýan <strong>5 fakultet</strong> döredildi.</p>
+            </div>
+
+            <h2 class="section-title reveal" style="text-align: center; width: 100%; margin-top: 2rem;">Biziň Maksadymyz</h2>
+            
+            <div class="features-grid">
+                <div class="feature-card reveal" style="transition-delay: 0.1s;">
+                    <i class="fa-solid fa-graduation-cap feature-icon"></i>
+                    <h3 class="feature-title">Ýokary Hilli Bilim</h3>
+                    <p style="color: var(--text-secondary); font-size: 0.95rem;">Talyplarymyza iň täze IT tehnologiýalary we ylymlary öwretmek arkaly, olary geljegiň hünärmenleri edip ýetişdirmek.</p>
+                </div>
+                
+                <div class="feature-card reveal" style="transition-delay: 0.2s;">
+                    <i class="fa-solid fa-lightbulb feature-icon"></i>
+                    <h3 class="feature-title">Innowasiýa we Ylym</h3>
+                    <p style="color: var(--text-secondary); font-size: 0.95rem;">Ýaş alymlar geňeşi we barlaghanalar arkaly täze innowasion taslamalary we startuplary durmuşa ornaşdyrmak.</p>
+                </div>
+                
+                <div class="feature-card reveal" style="transition-delay: 0.3s;">
+                    <i class="fa-solid fa-network-wired feature-icon"></i>
+                    <h3 class="feature-title">Sanly Ykdysadyýet</h3>
+                    <p style="color: var(--text-secondary); font-size: 0.95rem;">Türkmenistanyň sanly ykdysadyýete geçmek maksatnamasyny amala aşyrmak üçin ýokary hünärli kadrlar bilen üpjün etmek.</p>
+                </div>
+            </div>
+            
+            <h2 class="section-title reveal" style="text-align: center; width: 100%; margin-top: 5rem;">Taryhy Gysgaça</h2>
+            <div class="timeline reveal">
+                <div class="timeline-item left">
+                    <div class="timeline-content">
+                        <h3 style="color: var(--accent-cyan);">2019</h3>
+                        <p style="color: var(--text-secondary); margin-top: 10px;">Hormatly Prezidentimiziň Permany bilen Türkmenistanyň Telekommunikasiýalar we informatika instituty döredildi.</p>
+                    </div>
+                </div>
+                <div class="timeline-item right">
+                    <div class="timeline-content">
+                        <h3 style="color: var(--accent-cyan);">2021</h3>
+                        <p style="color: var(--text-secondary); margin-top: 10px;">Institutymyzyň talyplary halkara we milli derejedäki IT we programmirleme bäsleşiklerinde ilkinji orunlary eýeläp başladylar.</p>
+                    </div>
+                </div>
+                <div class="timeline-item left">
+                    <div class="timeline-content">
+                        <h3 style="color: var(--accent-cyan);">2022</h3>
+                        <p style="color: var(--text-secondary); margin-top: 10px;">Global RUR (Round University Ranking) halkara uniwersitetler reýtingine girizildi.</p>
+                    </div>
+                </div>
+                <div class="timeline-item right">
+                    <div class="timeline-content">
+                        <h3 style="color: var(--accent-cyan);">2024</h3>
+                        <p style="color: var(--text-secondary); margin-top: 10px;">Ylym-bilim-önümçilik arabaglanşygyny ýola goýmak ugrunda uly ösüşler we innowasion merkezleriň giňeldilmegi.</p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-col">
+                    <h3 style="color: var(--accent-cyan); font-family: 'Outfit', sans-serif; font-size: 1.5rem; font-weight: 800;">ITIT</h3>
+                    <p style="color: var(--text-secondary); margin-top: 1rem;">Türkmenistanyň Telekommunikasiýalar we informatika instituty - sanly geljegiň binýady.</p>
+                </div>
+                
+                <div class="footer-col">
+                    <h3>Peýdaly sahypalar</h3>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Baş sahypa</a></li>
+                        <li><a href="about.html">Biz barada</a></li>
+                        <li><a href="news.html">Täzelikler</a></li>
+                        <li><a href="science.html">Ýaş alymlar geňeşi</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-col">
+                    <h3>Habarlaşmak</h3>
+                    <ul class="contact-info footer-links">
+                        <li>
+                            <i class="fa-solid fa-location-dot"></i>
+                            <span>Magtymguly şaýoly 68, Aşgabat, Türkmenistan</span>
+                        </li>
+                        <li>
+                            <i class="fa-solid fa-envelope"></i>
+                            <a href="mailto:ttii.rektorlyk@online.tm">ttii.rektorlyk@online.tm</a>
+                        </li>
+                        <li>
+                            <i class="fa-solid fa-phone"></i>
+                            <a href="tel:+99312942179">+993 12 942179</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; <script>document.write(new Date().getFullYear())</script> Ähli hukuklary goralan. ITIT</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

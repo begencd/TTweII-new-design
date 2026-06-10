@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="tk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Türkmenistanyň Telekommunikasiýalar we informatika instituty - Täzelikler we bildirişler">
+    <title>Täzelikler | ITIT</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .page-header {
+            padding: 150px 0 80px;
+            text-align: center;
+            background: linear-gradient(to bottom, var(--bg-secondary), var(--bg-primary));
+            border-bottom: 1px solid var(--glass-border);
+        }
+
+        .news-page-section {
+            padding: 4rem 0;
+        }
+
+        .filter-container {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 1rem;
+            margin-bottom: 3rem;
+        }
+
+        .filter-btn {
+            background: var(--glass-bg);
+            border: 1px solid var(--glass-border);
+            color: var(--text-primary);
+            padding: 0.5rem 1.5rem;
+            border-radius: 20px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-family: 'Inter', sans-serif;
+            font-size: 0.9rem;
+        }
+
+        .filter-btn:hover, .filter-btn.active {
+            background: var(--accent-cyan);
+            color: var(--bg-primary);
+            border-color: var(--accent-cyan);
+        }
+
+        .pagination {
+            display: flex;
+            justify-content: center;
+            gap: 0.5rem;
+            margin-top: 4rem;
+        }
+
+        .page-btn {
+            width: 40px;
+            height: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: var(--glass-bg);
+            border: 1px solid var(--glass-border);
+            color: var(--text-primary);
+            border-radius: 5px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-decoration: none;
+        }
+
+        .page-btn:hover, .page-btn.active {
+            background: var(--accent-cyan);
+            color: var(--bg-primary);
+            border-color: var(--accent-cyan);
+        }
+
+        /* Unique layout for featured news */
+        .featured-news {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 0;
+            background: var(--glass-bg);
+            border: 1px solid var(--glass-border);
+            border-radius: 15px;
+            overflow: hidden;
+            margin-bottom: 4rem;
+            transition: transform 0.3s ease;
+        }
+
+        .featured-news:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+        }
+
+        .featured-img-container {
+            position: relative;
+            min-height: 300px;
+        }
+
+        .featured-news .news-content {
+            padding: 3rem;
+            justify-content: center;
+        }
+
+        .featured-news .news-title {
+            font-size: 1.8rem;
+        }
+
+        @media (max-width: 968px) {
+            .featured-news {
+                grid-template-columns: 1fr;
+            }
+            .featured-img-container {
+                height: 250px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header class="glass">
+        <div class="nav-container">
+            <a href="index.html" class="logo">ITIT.EDU.TM</a>
+            
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="index.html">Baş sahypa</a></li>
+                    <li><a href="about.html">Biz barada</a></li>
+                    <li><a href="news.html" class="active">Täzelikler</a></li>
+                    <li><a href="science.html">Ylym</a></li>
+                    <li><a href="faculties.html">Fakultetler</a></li>
+                    <li><a href="contact.html">Habarlaşmak</a></li>
+                </ul>
+            </nav>
+
+            <button class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </button>
+        </div>
+    </header>
+
+    <!-- Page Header -->
+    <div class="page-header">
+        <div class="container">
+            <h1 class="hero-title" style="font-size: 3.5rem; margin-bottom: 1rem; animation-delay: 0.2s;">Täzelikler</h1>
+            <p class="hero-subtitle" style="animation-delay: 0.4s;">Institutymyzda we dünýäde bolup geçýän wakalar</p>
+        </div>
+    </div>
+
+    <!-- Main Content -->
+    <section class="news-page-section">
+        <div class="container">
+            
+            <div class="filter-container reveal">
+                <button class="filter-btn active">Ählisi</button>
+                <button class="filter-btn">Ýaş alymlar geňeşi</button>
+                <button class="filter-btn">Bäsleşik</button>
+                <button class="filter-btn">IT we Tehnologiýa</button>
+                <button class="filter-btn">Makalalar</button>
+            </div>
+
+            <!-- Featured News -->
+            <div class="featured-news reveal">
+                <div class="featured-img-container" style="background: linear-gradient(45deg, #172a45, #0070f3); display: flex; align-items: center; justify-content: center;">
+                    <i class="fa-solid fa-microchip" style="font-size: 6rem; color: rgba(100, 255, 218, 0.3);"></i>
+                </div>
+                <div class="news-content">
+                    <span class="specialty-tag" style="display: inline-block; width: max-content; margin-bottom: 1rem;">Ýaş alymlar geňeşi</span>
+                    <div class="news-date">11/12/2024</div>
+                    <h3 class="news-title">Ylym-bilim-önümçilik arabaglanşygyny ýola goýmak üçin innowasion taslamalaryň sergisi geçirilýär</h3>
+                    <p class="news-excerpt">2024-nji ýylyň 24-nji sentýabrynda geçirilen Türkmenistanyň Halk Maslahatynyň taryhy mejlisinde Türkmen halkynyň Milli Lideri, Türkmenistanyň Halk Maslahatynyň Başlygy Gahryman Arkadagymyzyň "Ýokary okuw mekdeplerinde ylym-bilim-önümçilik arabaglanyşygynyň kämil usulyny döretmek" barada beren, degişli tabşyrygyny ýerine ýetirmek maskady bilen...</p>
+                    <a href="#" class="news-link">Giňişleýin <i class="fa-solid fa-arrow-right"></i></a>
+                </div>
+            </div>
+
+            <!-- News Grid -->
+            <div class="news-grid">
+                <div class="news-card glass reveal">
+                    <div class="news-img-wrapper">
+                        <div style="width: 100%; height: 100%; background: linear-gradient(45deg, #0a1930, #64ffda); display: flex; align-items: center; justify-content: center;">
+                            <i class="fa-solid fa-plane-departure" style="font-size: 4rem; color: rgba(4, 13, 33, 0.5);"></i>
+                        </div>
+                    </div>
+                    <div class="news-content">
+                        <div class="news-date">11/12/2024</div>
+                        <h3 class="news-title">Türkmenistanyň bilim ulgamynyň wekilleri ABŞ-nyň "Halkara okuw sapary" (IVLP) çäklerinde guralýan okuwlara gatnaşýarlar</h3>
+                        <p class="news-excerpt">Ozal habar berlişi ýaly, Amerikanyň Birleşen Ştatlarynyň Döwlet Departamentiniň "Halkara okuw saparynyň" (IVLP) çäklerinde guralýan "Ýokary okuw mekdeplerini dolandyrmak: hyzmatdaşlyk we täjirleşdirmek" atly okuwlara...</p>
+                        <a href="#" class="news-link">Doly oka <i class="fa-solid fa-arrow-right"></i></a>
+                    </div>
+                </div>
+
+                <div class="news-card glass reveal" style="transition-delay: 0.1s;">
+                    <div class="news-img-wrapper">
+                        <div style="width: 100%; height: 100%; background: linear-gradient(45deg, #0a1930, #172a45); display: flex; align-items: center; justify-content: center;">
+                            <i class="fa-solid fa-robot" style="font-size: 4rem; color: rgba(100, 255, 218, 0.5);"></i>
+                        </div>
+                    </div>
+                    <div class="news-content">
+                        <div class="news-date">22/11/2024</div>
+                        <h3 class="news-title">Türkmenistanda ýaşlaryň robot tehnologiýalary boýunça bäsleşigi geçiriler</h3>
+                        <p class="news-excerpt">Türkmenistanyň Bilim ministrliginiň habaryna görä, 2024-nji ýylyň 7-8-nji dekabrynda Ýaşlaryň robot tehnologiýalary boýunça bäsleşiginiň geçiriljekdigini yglan edildi. Bäsleşik robot tehnologiýalary ugry boýunça zehinli ýaşlary...</p>
+                        <a href="#" class="news-link">Doly oka <i class="fa-solid fa-arrow-right"></i></a>
+                    </div>
+                </div>
+
+                <div class="news-card glass reveal" style="transition-delay: 0.2s;">
+                    <div class="news-img-wrapper">
+                        <div style="width: 100%; height: 100%; background: linear-gradient(45deg, #0a1930, #0070f3); display: flex; align-items: center; justify-content: center;">
+                            <i class="fa-solid fa-medal" style="font-size: 4rem; color: rgba(255, 255, 255, 0.5);"></i>
+                        </div>
+                    </div>
+                    <div class="news-content">
+                        <div class="news-date">15/11/2024</div>
+                        <h3 class="news-title">Polşadaky olimpiadadan medallar çemeni</h3>
+                        <p class="news-excerpt">Eziz Diýarymyzda ýaşlaryň döwrebap bilim-terbiýe almagy, kämil düşünjeli, watansöýüji nesiller bolup ýetişmegi üçin ähli zerur şertler döredilýär. Ýaşlarymyzyň täze ylmy açyşlary, halkara bilim bäsleşiklerindäki üstünlikleri...</p>
+                        <a href="#" class="news-link">Doly oka <i class="fa-solid fa-arrow-right"></i></a>
+                    </div>
+                </div>
+
+                <div class="news-card glass reveal">
+                    <div class="news-img-wrapper">
+                        <div style="width: 100%; height: 100%; background: linear-gradient(45deg, #172a45, #64ffda); display: flex; align-items: center; justify-content: center;">
+                            <i class="fa-solid fa-microphone" style="font-size: 4rem; color: rgba(4, 13, 33, 0.5);"></i>
+                        </div>
+                    </div>
+                    <div class="news-content">
+                        <div class="news-date">27/09/2024</div>
+                        <h3 class="news-title">Ses buýruklary arkaly dolandyrylýan "Akylly öý" ulgamy</h3>
+                        <p class="news-excerpt">Hormatly Prezidentimiziň 2017-nji ýylyň 15-nji sentýabrynda çykaran "Türkmenistanda sanly bilim ulgamyny ösdürmek hakynda" kararyna hem-de 2021-nji ýylyň 12-nji fewralynda çykaran karary bilen tassyklanan maksatnama laýyklykda işlenip düzüldi...</p>
+                        <a href="#" class="news-link">Doly oka <i class="fa-solid fa-arrow-right"></i></a>
+                    </div>
+                </div>
+
+                <div class="news-card glass reveal" style="transition-delay: 0.1s;">
+                    <div class="news-img-wrapper">
+                        <div style="width: 100%; height: 100%; background: linear-gradient(45deg, #0a1930, #8892b0); display: flex; align-items: center; justify-content: center;">
+                            <i class="fa-solid fa-fingerprint" style="font-size: 4rem; color: rgba(100, 255, 218, 0.5);"></i>
+                        </div>
+                    </div>
+                    <div class="news-content">
+                        <div class="news-date">27/09/2024</div>
+                        <h3 class="news-title">Biometriki identifikasiýa barlag ulgamy</h3>
+                        <p class="news-excerpt">Hormatly Prezidentimiziň taýsyz tagallalary netijesinde häzirki wagtda ýurdumyzyň ykdysadyýetini senagatlaşdyrmak ugrunda alnyp barylýan işlere aýratyn uly ähmiýet berilýär. Şonuň netijesinde täze IT taslamalar işlenip düzüldi...</p>
+                        <a href="#" class="news-link">Doly oka <i class="fa-solid fa-arrow-right"></i></a>
+                    </div>
+                </div>
+
+                <div class="news-card glass reveal" style="transition-delay: 0.2s;">
+                    <div class="news-img-wrapper">
+                        <div style="width: 100%; height: 100%; background: linear-gradient(45deg, #0a1930, #0070f3); display: flex; align-items: center; justify-content: center;">
+                            <i class="fa-solid fa-chart-bar" style="font-size: 4rem; color: rgba(255, 255, 255, 0.5);"></i>
+                        </div>
+                    </div>
+                    <div class="news-content">
+                        <div class="news-date">17/10/2024</div>
+                        <h3 class="news-title">Туркменские вузы вошли в глобальный рейтинг университетов RUR</h3>
+                        <p class="news-excerpt">Вузы Туркменистана вошли в глобальный рейтинг ведущих университетов мира Round University Ranking (RUR). В рейтинговой таблице RUR World University Rankings разместились шесть туркменских вузов...</p>
+                        <a href="#" class="news-link">Doly oka <i class="fa-solid fa-arrow-right"></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Pagination -->
+            <div class="pagination reveal">
+                <a href="#" class="page-btn"><i class="fa-solid fa-chevron-left"></i></a>
+                <a href="#" class="page-btn active">1</a>
+                <a href="#" class="page-btn">2</a>
+                <a href="#" class="page-btn">3</a>
+                <a href="#" class="page-btn">...</a>
+                <a href="#" class="page-btn">18</a>
+                <a href="#" class="page-btn"><i class="fa-solid fa-chevron-right"></i></a>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-col">
+                    <h3 style="color: var(--accent-cyan); font-family: 'Outfit', sans-serif; font-size: 1.5rem; font-weight: 800;">ITIT</h3>
+                    <p style="color: var(--text-secondary); margin-top: 1rem;">Türkmenistanyň Telekommunikasiýalar we informatika instituty - sanly geljegiň binýady.</p>
+                </div>
+                
+                <div class="footer-col">
+                    <h3>Peýdaly sahypalar</h3>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Baş sahypa</a></li>
+                        <li><a href="about.html">Biz barada</a></li>
+                        <li><a href="news.html">Täzelikler</a></li>
+                        <li><a href="science.html">Ýaş alymlar geňeşi</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-col">
+                    <h3>Habarlaşmak</h3>
+                    <ul class="contact-info footer-links">
+                        <li>
+                            <i class="fa-solid fa-location-dot"></i>
+                            <span>Magtymguly şaýoly 68, Aşgabat, Türkmenistan</span>
+                        </li>
+                        <li>
+                            <i class="fa-solid fa-envelope"></i>
+                            <a href="mailto:ttii.rektorlyk@online.tm">ttii.rektorlyk@online.tm</a>
+                        </li>
+                        <li>
+                            <i class="fa-solid fa-phone"></i>
+                            <a href="tel:+99312942179">+993 12 942179</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; <script>document.write(new Date().getFullYear())</script> Ähli hukuklary goralan. ITIT</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
