@@ -8,28 +8,14 @@
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
-        .page-header {
-            padding: 150px 0 80px;
-            text-align: center;
-            background: linear-gradient(to bottom, var(--bg-secondary), var(--bg-primary));
-            border-bottom: 1px solid var(--glass-border);
-        }
-
         .contact-section {
             padding: 4rem 0;
-            background-image: url('images/tech-bg.png');
-            background-size: cover;
-            background-attachment: fixed;
+            background: var(--bg-secondary);
             position: relative;
         }
 
         .contact-overlay {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: rgba(4, 13, 33, 0.9);
+            display: none;
         }
 
         .contact-container {
@@ -47,26 +33,29 @@
         }
 
         .contact-card {
-            background: var(--glass-bg);
-            border: 1px solid var(--glass-border);
+            background: white;
+            border: 1px solid rgba(15, 23, 42, 0.08);
             padding: 2.5rem;
             border-radius: 15px;
             display: flex;
             align-items: flex-start;
             gap: 1.5rem;
-            transition: transform 0.3s ease;
+            transition: all 0.3s ease;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
         }
 
         .contact-card:hover {
             transform: translateY(-5px);
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
-            border-color: rgba(100, 255, 218, 0.3);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+            border-color: rgba(102, 126, 234, 0.3);
         }
 
         .contact-icon {
             font-size: 2.5rem;
-            color: var(--accent-cyan);
-            background: rgba(100, 255, 218, 0.1);
+            background: var(--gradient-primary);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
             width: 80px;
             height: 80px;
             display: flex;
@@ -74,6 +63,15 @@
             justify-content: center;
             border-radius: 50%;
             flex-shrink: 0;
+            background-color: rgba(102, 126, 234, 0.1);
+            background-image: none;
+        }
+
+        .contact-icon i {
+            background: var(--gradient-primary);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
         }
 
         .contact-details h3 {
@@ -85,77 +83,23 @@
         .contact-details p, .contact-details a {
             color: var(--text-secondary);
             font-size: 1.1rem;
-            line-height: 1.5;
+            line-height: 1.6;
             transition: color 0.3s ease;
         }
 
         .contact-details a:hover {
-            color: var(--accent-cyan);
+            color: var(--accent-blue);
         }
 
         .map-container {
-            background: var(--glass-bg);
-            border: 1px solid var(--glass-border);
+            background: white;
+            border: 1px solid rgba(15, 23, 42, 0.08);
             border-radius: 15px;
             overflow: hidden;
             height: 100%;
-            min-height: 400px;
+            min-height: 500px;
             position: relative;
-        }
-
-        /* Abstract map styling since we can't easily embed a real map without API keys/iframes that might break */
-        .abstract-map {
-            width: 100%;
-            height: 100%;
-            background: #0a1930;
-            background-image: 
-                radial-gradient(rgba(100, 255, 218, 0.1) 1px, transparent 1px),
-                radial-gradient(rgba(100, 255, 218, 0.1) 1px, transparent 1px);
-            background-size: 40px 40px;
-            background-position: 0 0, 20px 20px;
-            position: relative;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-
-        .map-marker {
-            position: absolute;
-            color: var(--accent-cyan);
-            font-size: 3rem;
-            animation: pulse 2s infinite;
-        }
-
-        @keyframes pulse {
-            0% { transform: scale(1); opacity: 1; }
-            50% { transform: scale(1.2); opacity: 0.7; }
-            100% { transform: scale(1); opacity: 1; }
-        }
-
-        .map-ripple {
-            position: absolute;
-            width: 100px;
-            height: 100px;
-            border: 2px solid var(--accent-cyan);
-            border-radius: 50%;
-            animation: ripple 2s infinite;
-            opacity: 0;
-        }
-
-        @keyframes ripple {
-            0% { width: 0; height: 0; opacity: 0.5; }
-            100% { width: 200px; height: 200px; opacity: 0; }
-        }
-
-        .map-label {
-            position: absolute;
-            bottom: 30%;
-            background: rgba(10, 25, 48, 0.9);
-            padding: 10px 20px;
-            border-radius: 20px;
-            border: 1px solid var(--accent-cyan);
-            color: var(--text-primary);
-            font-weight: 600;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
         }
 
         @media (max-width: 968px) {
@@ -164,6 +108,7 @@
             }
             .map-container {
                 height: 400px;
+                min-height: 400px;
             }
         }
     </style>
@@ -240,11 +185,16 @@
                 </div>
 
                 <div class="map-container reveal-right">
-                    <div class="abstract-map">
-                        <div class="map-ripple"></div>
-                        <i class="fa-solid fa-location-dot map-marker"></i>
-                        <div class="map-label">ITIT Baş binasy</div>
-                    </div>
+                    <iframe 
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3148.8361672891637!2d58.37763731531766!3d37.92708797973918!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3f700103c79194e9%3A0x7d6e5c5d5e5e5e5e!2sMagtymguly%20Avenue%2C%20Ashgabat%2C%20Turkmenistan!5e0!3m2!1sen!2s!4v1234567890123!5m2!1sen!2s" 
+                        width="100%" 
+                        height="100%" 
+                        style="border:0; border-radius: 15px;" 
+                        allowfullscreen="" 
+                        loading="lazy" 
+                        referrerpolicy="no-referrer-when-downgrade"
+                        title="ITIT Location Map">
+                    </iframe>
                 </div>
 
             </div>
